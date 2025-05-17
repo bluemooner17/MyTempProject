@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <HBox styleClass="header" alignment="CENTER">
+            <Label text="QuickLap" styleClass="title"/>
+        </HBox>
+    </top>
+    
+    <center>
+        <SplitPane dividerPositions="0.3">
+            <items>
+                <VBox styleClass="sidebar">
+                    <!-- Search and filter controls -->
+                    <TextArea promptText="Describe your needs..." styleClass="search-input"/>
+                    <Button text="Search" styleClass="search-button"/>
+                    
+                    <Label text="Filters" styleClass="filter-title"/>
+                    
+                    <VBox styleClass="filter-group">
+                        <Label text="Brand"/>
+                        <ComboBox styleClass="filter-combo"/>
+                    </VBox>
+                    
+                    <VBox styleClass="filter-group">
+                        <Label text="Category"/>
+                        <ComboBox styleClass="filter-combo"/>
+                    </VBox>
+                    
+                    <VBox styleClass="filter-group">
+                        <Label text="Price Range"/>
+                        <ComboBox styleClass="filter-combo"/>
+                    </VBox>
+                </VBox>
+                
+                <VBox styleClass="content">
+                    <Label text="Recommended Laptops" styleClass="section-title"/>
+                    <ListView styleClass="product-list"/>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+    
+    <bottom>
+        <HBox styleClass="footer" alignment="CENTER">
+            <Label text="© 2023 QuickLap - Laptop Recommendation System"/>
+        </HBox>
+    </bottom>
+    
+    <stylesheets>
+        <URL value="@/com/quicklap/ui/styles.css" />
+    </stylesheets>
+</BorderPane>
